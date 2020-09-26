@@ -1,10 +1,21 @@
 <template>
     <div>
-        home 文件入口
+        <el-container>
+            <el-header class="header">
+                <layout-header></layout-header>
+            </el-header>
+            <el-main class="content">
+                <div class="center">
+                    <router-view></router-view>
+                </div>
+            </el-main>
+            <!-- <el-footer class="footer">Footer</el-footer> -->
+        </el-container>
     </div>
 </template>
 
 <script>
+import layoutHeader from '@/components/layout-header'
 export default {
     name: 'home',
     props: {},
@@ -16,8 +27,26 @@ export default {
     mounted() {},
     watch: {},
     methods: {},
-    components: {}
+    components: {
+        layoutHeader
+    }
 }
 </script>
 
-<style scoped lang="less"></style>
+<style scoped lang="less">
+.header {
+    display: flex;
+    justify-content: center;
+}
+.content {
+    padding: 15px 0 0 0;
+    background-color: rgb(249, 249, 249);
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    .center {
+        width: 900px;
+        background-color: #fff;
+    }
+}
+</style>
