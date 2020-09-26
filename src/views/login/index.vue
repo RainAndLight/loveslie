@@ -174,8 +174,8 @@ export default {
     // background: transparent url(../../assets/img/loginBG.jpg) center center no-repeat;
     // background: none\0;
     // content: '';
-    width: 99%;
-    height: 99%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     background-position: bottom;
     // }

@@ -40,11 +40,12 @@ export default {
 }
 .content {
     padding: 15px 0 0 0;
-    background-color: rgb(249, 249, 249);
-    height: calc(100vh - 80px);
+    background-color: rgb(255, 255, 255);
+    height: calc(100vh - 60px);
     display: flex;
     justify-content: center;
     .center {
+        padding: 10px 10px 0 10px;
         width: 900px;
         background-color: #fff;
     }

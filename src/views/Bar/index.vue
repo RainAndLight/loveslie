@@ -5,7 +5,7 @@
 <script>
 export default {
     name: 'bar',
-    components() {},
+    components: {},
     data() {
         return {}
     },
