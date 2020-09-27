@@ -3,7 +3,7 @@
         <el-card class="login-card" v-if="flag === 'login'">
             <div slot="header">
                 <i class="el-icon-d-arrow-right"></i>
-                <span class="title" style="marginLeft:10px">欢迎登录</span>
+                <span class="title" style="marginLeft:10px">欢 迎 登 录 </span>
             </div>
             <el-form class="card-content" ref="form" :model="loginForm" :rules="loginRules">
                 <el-form-item prop="user">

@@ -51,7 +51,7 @@
                     </span>
                     <span>
                         <i class="el-icon-magic-stick"></i>
-                        {{ ' 2 ' + ' 个人觉得很赞 ' }}
+                        {{ ' 2 ' + ' 人觉得很赞 ' }}
                     </span>
                 </div>
             </div>
