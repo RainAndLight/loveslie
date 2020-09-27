@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="box">
         404
     </div>
 </template>
@@ -20,4 +20,10 @@ export default {
 }
 </script>
 
-<style scoped lang="less"></style>
+<style scoped lang="less">
+.box {
+    height: 100vh;
+    background-image: url('../assets/404.jpg');
+    background-size: cover;
+}
+</style>

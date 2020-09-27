@@ -2,10 +2,10 @@
     <div class="box">
         <img src="@/assets/logo.jpg" style="width:100px;height:60px" />
         <p class="titleName">小小论坛</p>
-        <el-menu default-active="1" class="el-menu-demo" mode="horizontal" @select="handleSelect" router>
+        <el-menu default-active="/home" class="el-menu-demo" mode="horizontal" @select="handleSelect" router>
             <el-menu-item index="/home">广 场</el-menu-item>
             <el-menu-item index="/home/bar">频 道</el-menu-item>
-            <el-menu-item index="3">日 记</el-menu-item>
+            <el-menu-item index="/home/myDiary">日 记</el-menu-item>
             <!-- <el-submenu index="2">
                 <template slot="title">我的工作台</template>
                 <el-menu-item index="2-1">选项1</el-menu-item>
