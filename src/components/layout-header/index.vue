@@ -4,7 +4,7 @@
         <p class="titleName">小小论坛</p>
         <el-menu default-active="1" class="el-menu-demo" mode="horizontal" @select="handleSelect" router>
             <el-menu-item index="/home">广 场</el-menu-item>
-            <el-menu-item index="/home/bar">看 帖</el-menu-item>
+            <el-menu-item index="/home/bar">频 道</el-menu-item>
             <el-menu-item index="3">日 记</el-menu-item>
             <!-- <el-submenu index="2">
                 <template slot="title">我的工作台</template>
@@ -49,7 +49,7 @@ export default {
 <style scoped lang="less">
 .box {
     width: 1300px;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     display: flex;
     // justify-content: center;
     align-items: center;
