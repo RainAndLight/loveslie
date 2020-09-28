@@ -45,7 +45,7 @@ export default {
     display: flex;
     justify-content: center;
     .center {
-        padding: 10px 10px 0 10px;
+        // padding: 10px 10px 0 10px;
         width: 900px;
         background-color: #fff;
     }

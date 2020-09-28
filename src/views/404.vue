@@ -1,7 +1,5 @@
 <template>
-    <div class="box">
-        404
-    </div>
+    <div class="box"></div>
 </template>
 
 <script>

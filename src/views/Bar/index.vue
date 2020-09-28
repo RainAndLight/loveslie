@@ -30,6 +30,7 @@ export default {
     components: {},
     data() {
         return {
+            data: ['网络技术类', '秋名山赛道区', '实用工具、网页安利频道', '现充爆照美好生活区', ''],
             channel_item: [
                 {
                     channelId: 1,

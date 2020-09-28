@@ -16,6 +16,11 @@ const routes = [
         component: () => import('@/views/404')
     },
     {
+        path: '/login',
+        name: 'login',
+        component: Login
+    },
+    {
         path: '/home',
         component: Home,
         children: [
@@ -30,19 +35,13 @@ const routes = [
             {
                 path: 'myDiary',
                 component: () => import('@/views/MyDiary')
+            },
+            {
+                path: 'article',
+                component: () => import('@/views/Article')
             }
         ]
-    },
-    {
-        path: '/login',
-        name: 'login',
-        component: Login
     }
-    // {
-    //     path: '/about',
-    //     name: 'About',
-    //     component: () => import('../views/About.vue')
-    // }
 ]
 
 const router = new VueRouter({
