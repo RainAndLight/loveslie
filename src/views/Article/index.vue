@@ -1,17 +1,17 @@
 <template>
-    <div class="box">
-        <el-form>
+    <div class="box1">
+        <el-form label-width="150px" label-position="right">
             <md-input v-model="form.title" icon="el-icon-search" name="title" placeholder="输入标题">
                 标题
             </md-input>
             <div style="margin-top:10px;color:rgb(125,125,125)">编辑正文</div>
-            <markdown-editor :height="650" style="margin-top:20px" ref="markdownEditor" v-model="form.content" />
+            <markdown-editor style="margin-top:20px" ref="markdownEditor" v-model="form.content" />
             <div class="footerButton">
                 <el-link>
                     markdown 富文本编辑器使用教程
                 </el-link>
             </div>
-            <div v-html="html" />
+
             <el-form-item label="上传封面图">
                 <el-upload
                     class="upload-demo"
@@ -19,7 +19,7 @@
                     action="https://jsonplaceholder.typicode.com/posts/"
                     :on-preview="handlePreview"
                     :on-remove="handleRemove"
-                    :file-list="fileList"
+                    :file-list="form.fileList"
                     :auto-upload="false"
                     list-type="picture-card"
                 >
@@ -50,12 +50,15 @@
                 </el-select>
             </el-form-item>
             <div class="footer">
-                <el-button round @click="look" type="info">保存本地草稿</el-button>
-                <el-button round @click="look">预览</el-button>
-                <el-button round @click="look" type="primary">提交</el-button>
+                <div class="footer_box">
+                    <el-button round @click="look" type="info">保存本地草稿</el-button>
+                    <el-button round @click="look">预览</el-button>
+                    <el-button round @click="look" type="primary" style="margin-right: 40px;">提交</el-button>
+                </div>
             </div>
         </el-form>
-        <el-dialog :visible.sync="dialogVisible" width="50%" :before-close="true">
+        <div v-html="html" />
+        <el-dialog :visible.sync="dialogVisible" width="50%">
             <el-image :src="dialogImageUrl"></el-image>
         </el-dialog>
     </div>
@@ -69,23 +72,24 @@ export default {
     props: {},
     data() {
         return {
+            disabled: false,
             content: '### 推荐使用warkdowm 来发表 技术文档',
             html: '',
             form: {
                 title: '',
                 content: '',
-                channel: ''
+                channel: '',
+                fileList: [
+                    {
+                        name: 'girl1.jpeg',
+                        url: 'https://w.wallhaven.cc/full/g8/wallhaven-g8omme.png'
+                    },
+                    {
+                        name: 'girl2.jpeg',
+                        url: 'https://w.wallhaven.cc/full/5w/wallhaven-5w2689.jpg'
+                    }
+                ]
             },
-            fileList: [
-                {
-                    name: 'girl1.jpeg',
-                    url: 'https://w.wallhaven.cc/full/g8/wallhaven-g8omme.png'
-                },
-                {
-                    name: 'girl2.jpeg',
-                    url: 'https://w.wallhaven.cc/full/5w/wallhaven-5w2689.jpg'
-                }
-            ],
             dialogImageUrl: '',
             dialogVisible: false,
             options: [
@@ -145,34 +149,39 @@ export default {
 </script>
 
 <style scoped lang="less">
-.box {
-    padding-bottom: 60px;
+.box1 {
+    padding: 10px 10px 80px 10px;
     position: relative;
     .footerButton {
+        margin-top: 20px;
+        margin-bottom: 20px;
         display: flex;
         justify-content: flex-end;
-        padding-top: 10px;
         padding-right: 10px;
-        // color: red;
-        // flex-direction: row-reverse;
     }
     .footer {
-        // position: absolute;
-        bottom: 0;
-        padding: 10px;
-        width: 900px;
-        // height: 100px;
-        background-color: rgb(249, 249, 249);
-        // display: flex;
-        // justify-content: flex-end;
-        position: fixed;
-        left: 0px;
-        right: 0;
-        bottom: 0px;
         width: 100%;
         height: 50px;
-        background-color: #eee;
+        padding: 10px;
+        background-color: rgb(249, 249, 249);
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0px;
         z-index: 9999;
+        .footer_box {
+            width: 900px;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    & /deep/ .el-form-item__label {
+        color: #000;
+        font-size: 18px;
+        margin-right: 28px;
+        font-weight: 700;
     }
 }
 </style>

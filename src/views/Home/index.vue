@@ -15,6 +15,9 @@
 </template>
 
 <script>
+// import live2d from 'vue-live2d'
+// import 'vue-live2d/dist/vue-live2d.css'
+// const { L2Dwidget } = require('../../../static/live2dw/lib/L2Dwidget.min.js')
 import layoutHeader from '@/components/layout-header'
 export default {
     name: 'home',
@@ -23,10 +26,26 @@ export default {
         return {}
     },
     computed: {},
-    created() {},
+    created() {
+        // this.intLive2D()
+    },
     mounted() {},
     watch: {},
-    methods: {},
+    methods: {
+        intLive2D() {
+            L2Dwidget.init({
+                pluginRootPath: 'static/live2dw/',
+                pluginJsPath: 'lib/',
+                pluginModelPath: 'live2d-widget-model-haru_2/assets/',
+                tagMode: false,
+                debug: false,
+                model: { jsonPath: 'static/live2dw/live2d-widget-model-haru_2/assets/haru02.model.json' },
+                display: { position: 'right', width: 150, height: 300 },
+                mobile: { show: true },
+                log: false
+            })
+        }
+    },
     components: {
         layoutHeader
     }

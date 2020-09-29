@@ -28,7 +28,10 @@
             <el-dropdown @command="clickMenu">
                 <!-- 匿名插槽  下拉菜单显示的元素内容 -->
                 <div class="userInfo_content">
-                    <el-image :src="user_poto_src"></el-image>
+                    <!-- <el-image :src="user_poto_src"></el-image> -->
+                    <el-avatar shape="square" :src="user_poto_src" :size="40" fit="fill" style="margin-right:10px">
+                        user
+                    </el-avatar>
                     <span>{{ 'RainAndLight' }}</span>
                 </div>
                 <el-dropdown-menu slot="dropdown">
@@ -46,7 +49,9 @@ export default {
     name: 'layout-header',
     data() {
         return {
-            user_poto_src: 'https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg'
+            // user_poto_src: 'https://w.wallhaven.cc/full/4x/wallhaven-4xkgk3.jpg'
+            // user_poto_src: 'https://w.wallhaven.cc/full/md/wallhaven-md59dk.jpg'
+            user_poto_src: require('@/assets/user_select_photo/1.jpg')
         }
     },
     methods: {
