@@ -6,7 +6,7 @@
             <el-menu-item index="/home">广场动态</el-menu-item>
             <el-menu-item index="/home/bar">小小圈子</el-menu-item>
             <el-menu-item index="/home/article">发表文章</el-menu-item>
-            <el-menu-item index="/home/2">工 具</el-menu-item>
+            <el-menu-item index="/home/utils">工 具</el-menu-item>
             <el-menu-item index="/home/myDiary">日 记</el-menu-item>
             <el-menu-item index="/home/admin">后台管理系统</el-menu-item>
             <!-- <el-submenu index="2">

@@ -22,8 +22,17 @@
                     <div class="contentItem">
                         <div class="contentItem_header">
                             <div>
-                                <img class="user_image" src="../../assets/user_photo.jpg" alt="" />
+                                <el-image class="user_image" :src="require('@/assets/user_photo.jpg')" alt="" />
                             </div>
+                            <!-- <el-avatar
+                                shape="square"
+                                :src="require('@/assets/user_photo.jpg')"
+                                :size="50"
+                                fit="contain"
+                                style="margin-right:10px"
+                            >
+                                user
+                            </el-avatar> -->
                             <div class="user_info">
                                 <div class="user_name">RainAndLight</div>
                                 <div class="user_time">发表于 2020-9-26 21:53</div>
@@ -37,7 +46,9 @@
                                 Holer开源软件不以盈利为目的，用户可以以捐助的形式开通holer服务或申请holer服务端软件license，支持holer未来的开发和维护。捐款将用于holer的硬件、软件、服务器、网络以及其他费用，您的支持会让holer一直发展存活下来。使用公开的holer映射或者开通holer服务，通过holer客户端软件经holer服务器实现公网访问
                             </div>
                             <div class="detilImg">
-                                <img src="../../assets/detilImg01.jpg" alt="" />
+                                <el-image :src="require('@/assets/detilImg01.jpg')">
+                                    <div slot="placeholder" class="image-slot">加载中<span class="dot">...</span></div>
+                                </el-image>
                             </div>
                         </div>
                         <div class="contentItem_footer">

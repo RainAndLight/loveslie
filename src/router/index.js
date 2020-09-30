@@ -43,13 +43,17 @@ const routes = [
             {
                 path: 'account',
                 component: () => import('@/views/User/account')
+            },
+            {
+                path: 'utils',
+                component: () => import('@/views/Utils')
             }
         ]
     }
 ]
 
 const router = new VueRouter({
-    mode: 'history',
+    mode: 'hash',
     routes
 })
 

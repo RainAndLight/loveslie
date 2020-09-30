@@ -46,13 +46,13 @@
                 </el-form-item>
             </el-form>
         </el-card>
-        <!-- <register @update="getKey()" ref="register" v-if="flag === 'register'"></register> -->
+        <register @update="getKey()" ref="register" v-if="flag === 'register'"></register>
     </div>
 </template>
 
 <script>
 import md5 from 'md5'
-// import register from './register'
+import register from './register'
 // import eventBus from '@/utils/eventBus'
 import routes from '@/router/index'
 // import Home from '@/views/home'
@@ -60,7 +60,7 @@ import routes from '@/router/index'
 export default {
     name: 'login',
     components: {
-        // register
+        register
     },
     data() {
         return {
@@ -186,7 +186,7 @@ export default {
         width: 300px;
         height: 350px;
         z-index: 2;
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255, 0.1);
         .title {
             color: #1c2438;
             font-weight: 800;
